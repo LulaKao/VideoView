@@ -22,9 +22,12 @@ public class MainActivity extends AppCompatActivity implements MediaPlayer.OnErr
         MediaController mediaController = new MediaController(this);
         videoView.setMediaController(mediaController); // 把 MediaController 設定給 VideoView
 
-        // 設定 VideoView 要播放的影片檔
-        Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.video);
-        videoView.setVideoURI(uri);
+        // 設定要播放的影片路徑
+        videoView.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.video);
+
+//        // 設定 VideoView 要播放的影片檔
+//        Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.video);
+//        videoView.setVideoURI(uri);
 
         // 設定 VideoView 的 Callback
         videoView.setOnCompletionListener(this);
