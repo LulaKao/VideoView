@@ -19,10 +19,8 @@ public class MainActivity extends AppCompatActivity implements MediaPlayer.OnErr
 
         videoView = findViewById(R.id.videoView);
 
-//        videoView = new VideoView(this);
         MediaController mediaController = new MediaController(this);
         videoView.setMediaController(mediaController); // 把 MediaController 設定給 VideoView
-//        setContentView(videoView);
 
         // 設定 VideoView 要播放的影片檔
         Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.video);
